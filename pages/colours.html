@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMindByBarto</title>
+    <!--CSS-->
+    <link href="/CSS/styles.css" rel="stylesheet"/>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-5py-3 my-4">
+        <div class="titulo">
+                <div class="row text-center my-5"><h1><div class="logo nik">MasterMind</div>      
+        </div>
+    </div>
+
+    <!--NAVBAR-->
+        <nav class="navbar bg-dark border-bottom border-body navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/pages/level.html">Play</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/pages/about.html">Abaut</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+  <div class="container-fluid background p-0 d-flex flex-column align-items-center coloursPage">
+
+    <div class="row h-25 how">
+        <div class="col-12 fs-1 text-light d-flex align-items-end ">
+            <p>Select your colors</p>
+            <a href="./game.html" class="btn btn-outline-secondary m-4" type="boton"
+                onclick="saveChosenColours()">ok</a>
+        </div>
+    </div>
+
+    <!-- easy -->
+    <div class="row row-cols-2" id="beginnerRow">
+        <div class="col-md-3 d-flex flex-column align-items-center p-0">
+            <div class="m-3 m-md-5 square" id="squareB1"></div>
+            <input type="color" class="colorpicker" id="B1" />
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-center p-0">
+            <div class="m-3 m-md-5 square" id="squareB2"></div>
+            <input type="color" class="colorpicker" id="B2" />
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-center p-0">
+            <div class="m-3 m-md-5 square" id="squareB3"></div>
+            <input type="color" class="colorpicker" id="B3" />
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-center p-0">
+            <div class="m-3 m-md-5 square" id="squareB4"></div>
+            <input type="color" class="colorpicker" id="B4" />
+        </div>
+    </div>
+
+    <!-- medium -->
+    <div class="row row-cols-2 row-cols-md-5" id="intermediateRow">
+        <div class="col d-flex flex-column align-items-center">
+            <div class="m-3 m-md-5 square" id="squareI1"></div>
+            <input type="color" class="colorpicker" id="I1" />
+        </div>
+        <div class="col d-flex flex-column align-items-center">
+            <div class="m-3 m-md-5 square" id="squareI2"></div>
+            <input type="color" class="colorpicker" id="I2" />
+        </div>
+        <div class="col d-flex flex-column align-items-center">
+            <div class="m-3 m-md-5 square" id="squareI3"></div>
+            <input type="color" class="colorpicker" id="I3" />
+        </div>
+        <div class="col d-flex flex-column align-items-center">
+            <div class="m-3 m-md-5 square" id="squareI4"></div>
+            <input type="color" class="colorpicker" id="I4" />
+        </div>
+        <div class="col d-flex flex-column align-items-center">
+            <div class="m-3 m-md-5 square" id="squareI5"></div>
+            <input type="color" class="colorpicker" id="I5" />
+        </div>
+    </div>
+
+    <!-- pro -->
+     
+        <div class="row row-cols-2 row-cols-md-6" id="advancedRow">
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareA1"></div>
+                <input type="color" class="colorpicker" id="A1" />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareA2"></div>
+                <input type="color" class="colorpicker" id="A2" />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareA3"></div>
+                <input type="color" class="colorpicker" id="A3" />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareA4"></div>
+                <input type="color" class="colorpicker" id="A4" />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareA5"></div>
+                <input type="color" class="colorpicker" id="A5" />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareA6"></div>
+                <input type="color" class="colorpicker" id="A6" />
+            </div>
+        </div>
+
+    
+    
+ 
+  
+<!--FOOTER-->
+<div class="footer">
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a href="/index.html" class="nav-link text-muted">Home</a></li>
+            <li class="nav-item"><a href="#!" class="nav-link text-muted">Features</a></li>
+            <li class="nav-item"><a href="https://github.com/PonsBarto" class="nav-link text-muted">BartoPons</a></li>
+            <li class="nav-item"><a href="#!" class="nav-link text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="/pages/about.html" class="nav-link text-muted">About</a></li>
+        </ul>
+    </footer>
+</div>
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/game.js"></script>
+</body>
+
+</html>
